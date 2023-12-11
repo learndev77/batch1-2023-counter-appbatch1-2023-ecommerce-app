@@ -2,12 +2,18 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import App from "./App";
 import { BrowserRouter } from "react-router-dom";
+import ProductContext, { ProductProvider } from "./contexts/ProductContext";
+import { UserInterfaceProvider } from "./contexts/UserInterfaceContext";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
     <BrowserRouter>
-      <App />
+      <UserInterfaceProvider>
+        <ProductProvider>
+          <App />
+        </ProductProvider>
+      </UserInterfaceProvider>
     </BrowserRouter>
   </React.StrictMode>
 );

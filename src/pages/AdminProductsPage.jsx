@@ -3,7 +3,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import ProductsList from "../components/ProductsList";
 
-const AdminProductsPage = ({ products, onDeleteProduct }) => {
+const AdminProductsPage = () => {
   return (
     <Grid container justifyContent="flex-end" textAlign="end">
       <Grid item xs={12}>
@@ -12,7 +12,10 @@ const AdminProductsPage = ({ products, onDeleteProduct }) => {
         </Button>
       </Grid>
       <Grid item xs={12}>
-        <ProductsList products={products} onDeleteProduct={onDeleteProduct} />
+        <ProductsList
+        // products={products}
+        // onDeleteProduct={onDeleteProduct}
+        />
       </Grid>
     </Grid>
   );

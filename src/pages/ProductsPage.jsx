@@ -2,14 +2,14 @@ import React from "react";
 import Products from "../components/Products";
 
 const ProductsPage = ({
-  products,
+  //   products,
   onAddToCart,
   onRemoveFromCart,
   cartItems,
 }) => {
   return (
     <Products
-      products={products}
+      // products={products}
       onAddToCart={onAddToCart}
       onRemoveFromCart={onRemoveFromCart}
       cartItems={cartItems}

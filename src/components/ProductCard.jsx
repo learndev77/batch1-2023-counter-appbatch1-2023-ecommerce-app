@@ -16,7 +16,8 @@ import {
   Grid,
   Typography,
 } from '@mui/material'
-import React from 'react'
+import React, { useContext } from "react";
+import { ProductContext } from "../contexts/ProductContext";
 
 const ProductCard = ({ product, onAddToCart, cartItem, onRemoveFromCart }) => {
   const renderCartActions = () => {
@@ -33,7 +34,7 @@ const ProductCard = ({ product, onAddToCart, cartItem, onRemoveFromCart }) => {
               <Remove />
             </Button>
           </Grid>
-          <Grid item xs={2} sx={{ textAlign: 'center' }}>
+          <Grid item xs={2} sx={{ textAlign: "center" }}>
             <Typography variant="body2">{cartItem.quantity}</Typography>
           </Grid>
           <Grid item xs={5}>
@@ -47,7 +48,7 @@ const ProductCard = ({ product, onAddToCart, cartItem, onRemoveFromCart }) => {
             </Button>
           </Grid>
         </Grid>
-      )
+      );
     } else {
       return (
         <Button
@@ -57,9 +58,9 @@ const ProductCard = ({ product, onAddToCart, cartItem, onRemoveFromCart }) => {
         >
           Add to Cart
         </Button>
-      )
+      );
     }
-  }
+  };
   return (
     <Card>
       <CardHeader title={product.title} subheader={`P${product.price}`} />
@@ -96,7 +97,7 @@ const ProductCard = ({ product, onAddToCart, cartItem, onRemoveFromCart }) => {
         )} */}
       </CardActions>
     </Card>
-  )
-}
+  );
+};
 
 export default ProductCard

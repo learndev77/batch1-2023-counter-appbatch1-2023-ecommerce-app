@@ -1,8 +1,15 @@
 import { Grid } from "@mui/material";
-import React from "react";
+import React, { useContext } from "react";
 import ProductCard from "./ProductCard";
+import { ProductContext } from "../contexts/ProductContext";
 
-const Products = ({ products, onAddToCart, cartItems, onRemoveFromCart }) => {
+const Products = ({
+  // products,
+  onAddToCart,
+  cartItems,
+  onRemoveFromCart,
+}) => {
+  const { products } = useContext(ProductContext);
   return (
     <Grid container spacing={3}>
       {products.map((product) => (
